@@ -1,0 +1,45 @@
+<html> 
+<head> 
+  <title>Ajax with jQuery Example</title> 
+  <script type="text/JavaScript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script> 
+  
+  <script type="text/JavaScript"> 
+  $(document).ready(function(){ 
+    
+               $("#history").click(function(){ 
+                  // alert("history");
+		   $('#main-body').load('medication_history_view.php')
+               });                
+                $("#medical").click(function(){ 
+                  //alert("medical");
+		   $('#main-body').load('medication_medical_record_view.php')
+                });
+                $("#order").click(function(){ 
+                  //alert("order");
+		   $('#main-body').load('medication_medical_order_view.php')
+                });
+                $("#result").click(function(){ 
+                  //alert("result");
+		   $('#main-body').load('medication_Result_view.php')
+                });          
+    
+  }); 
+  </script>   
+   
+</head> 
+<body> 
+
+    <div class="top-menu" id="top-menu">
+        <ul>
+            <li><a id="history" href="#">Treatment History</a></li>
+            <li><a id="medical" href="#">Medical Record</a></li>
+            <li><a id="order" href="#">Treatment Order</a></li>
+            <li><a id="result" href="#">Result Report</a></li>
+        </ul>
+    </div>
+        
+    <div class="main-body" id="main-body">
+    </div>
+
+</body> 
+</html>
